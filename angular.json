@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "vehicle-store": {
+      "projectType": "library",
+      "root": "projects/vehicle-store",
+      "sourceRoot": "projects/vehicle-store/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/vehicle-store/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vehicle-store/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vehicle-store/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/vehicle-store/src/test.ts",
+            "tsConfig": "projects/vehicle-store/tsconfig.spec.json",
+            "karmaConfig": "projects/vehicle-store/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "cli": {
