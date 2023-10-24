@@ -21,6 +21,10 @@
       "@vehicle/store": [
         "projects/vehicle-store/src/public-api",
         "dist/vehicle-store"
+      ],
+      "@vehicle/common": [
+        "projects/vehicle-common/src/public-api",
+        "dist/vehicle-common"
       ]
     }
   },

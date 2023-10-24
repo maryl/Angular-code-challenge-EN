@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { VehicleStoreModule } from '@vehicle/store';
 
 import { AppComponent } from './app.component';
-import { StoreModule } from '@ngrx/store';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({}, {})
+    ReactiveFormsModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
+    VehicleStoreModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
